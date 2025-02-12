@@ -115,7 +115,7 @@ window.addEventListener("resize", () => {
 });
 
 // Node'ları oluştur
-const numberOfNodes = 400; // Node sayısını buradan ayarla
+const numberOfNodes = 100; // Node sayısını buradan ayarla
 for (let i = 0; i < numberOfNodes; i++) {
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height;
