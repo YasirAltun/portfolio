@@ -16,7 +16,7 @@ class Node {
         this.vx = Math.random() * 2 - 1; // Rastgele hız (x ekseni)
         this.vy = Math.random() * 2 - 1; // Rastgele hız (y ekseni)
         this.radius = 3; // Node boyutu
-        this.color = "#cd1212"; // Kırmızı renk
+        this.color = "#fff"; // Beyaz renk
     }
 
     // Node'u çiz

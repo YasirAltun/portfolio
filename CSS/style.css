@@ -56,7 +56,7 @@ body{
 
 }
 span{
-    background: linear-gradient(270deg,#7a0000 10%,#cd1212 100%);
+    background: #cd1212 100%;
     background-clip: text;
     color: transparent;
 }
