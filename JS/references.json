@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Saadin Oyucu",
+        "position": "Associate Professor at Adiyaman University Computer Engineering Department, Head of the epartment. General Manager of Deep Zeka ",
+        "relationship": "Advisor",
+        "email": "saadinoyucu@gmail.com",
+        "phone": "0000000",
+        "image": "../images/saadinhoca.jpg"
+    },
+    {
+        "name": "Ahmet Bedri Ozer",
+        "position": "General Manager of Narveri Education Informatics Consultancy Publishing Advertising Industry and Trade Limited Company / Fırat University Computer Engineering Prof.",
+        "relationship": "University Professor",
+        "email": "ozerbedri@gmail.com / bedriozer@firat.edu.tr",
+        "phone": "00000",
+        "image": "../images/ahmetbedrihoca.jpg"
+    },
+    {
+        "name": "Ozal Yildirim",
+        "position": "Associate Professor at Fırat University Technology Facility, Software Engineering Department",
+        "relationship": "University Dr.",
+        "email": "ozalyildirim@firat.edu.tr",
+        "phone": "00000000",
+        "image": "../images/ozalhoca.jpg"
+    },
+    {
+        "name": "Resul Daş",
+        "position": "Professor at Fırat University Technology Facility, Software Engineering Department",
+        "relationship": "University Professor / Advisor",
+        "email": "rdas@firat.edu.tr",
+        "phone": "00000000",
+        "image": "../images/resulhoca.png"
+    },
+    {
+        "name": "Ferhat Ucar",
+        "position": "Associate Professor at Fırat University Technology Facility, Software Engineering Department",
+        "relationship": "University Dr.",
+        "email": "fucar@firat.edu.tr / ferhatucar01@gmail.com",
+        "phone": "00000000",
+        "image": "../images/ferhathoca.jpg"
+    }
+]

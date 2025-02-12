@@ -1,0 +1,829 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* width: 50%; */
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #080808;
+    --second-bg-color: #101010;
+    --text-color: #fff;
+    --main-color: #cd1212;
+}
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+
+}
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.header{
+    top: 0;
+    left: 0;
+    padding: 4rem 15%;
+    background-color: rgba(0,0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    height: 30px;
+}
+#menu-icon{
+    font-size: 3.5rem;
+    color: var(--main-color);
+    display: none;
+}
+.logo{
+    font-weight: 800;
+    color: var(--text-color);
+    font-size: 4rem;
+    cursor: pointer;
+
+}
+.logo:hover{
+    transform: scale(1.1);
+    color: var(--main-color);
+    transition: 0.3s ease-in-out;
+
+}
+span{
+    background: linear-gradient(270deg,#7a0000 10%,#cd1212 100%);
+    background-clip: text;
+    color: transparent;
+}
+.navbar a{
+
+    justify-content: space-between;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease-in-out;
+    border-bottom:  transparent 3px solid;
+}
+.navbar a:hover{
+    color: var(--main-color);
+    border-bottom: var(--main-color) 3px solid;
+
+}
+
+
+
+
+
+
+
+.gradient-btn{
+    background: linear-gradient(270deg,#7a0000 10%,#cd1212 100%);
+
+    color: white;
+    border: none;
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-wrap: nowrap;
+
+}
+.gradient-btn:hover{
+    transform: scale(1.05);
+}
+
+section{
+    padding: 10rem 15%;
+    min-height: 90vh;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15rem;
+}
+.home-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+}
+.home-content h1{
+    font-size: 8rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin: 1 rem 0 ;
+}
+.home-content p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.home-img img{
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+
+}
+.home-img img:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+
+
+/* resim sırası düzenleme */
+
+@media (max-width: 768px) {
+    .home {
+        flex-direction: column;
+        gap: 3rem;
+        padding: 5rem 10%;
+    }
+
+    .home-content {
+        align-items: center;
+        text-align: center;
+        order: 2;
+    }
+
+    .home-img {
+        order: 1;
+    }
+
+    .home-img img {
+        width: 60vw;
+    }
+}
+
+/* resim sırası düzenleme  sonu*/
+
+
+
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: var(--main-color);
+    border-radius: 50%;
+    font-size: 3rem;
+    padding: 1rem;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    transition: 0.3s ease-in-out;
+    margin: 3rem 0.5rem;
+}
+.social-icons a:hover{
+    background-color: var(--main-color);
+    color: var(--text-color);
+    border: 2px solid var(--main-color);
+    transform: scale(1.2)translateY(-5px);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.btn-group{
+    display: flex;
+    gap: 1.5rem;
+}
+.btn{
+    display: inline-block;
+    box-shadow: 0 0 25px var(--main-color);
+    background-color: var(--main-color);
+    color: black;
+    border: 2px solid transparent;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+
+}
+.btn:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+}
+.btn-group a:nth-of-type(2){
+    background-color: black;
+    color: var(--main-color);
+    box-shadow: 0 0 25px transparent;
+    border: 2px solid var(--main-color);
+}
+.btn-group a:nth-of-type(2):hover{
+    background-color: var(--main-color);
+    color: black;
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+
+
+/* timeline*/
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    
+}
+.about-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10rem;
+
+
+}
+.about-column {
+    position: relative;
+    width: 100%;
+
+
+}
+
+
+.about-column .title {
+    position: relative;
+    display: inline-block;
+    font-size: 28px;
+    margin: 32px 0 16px 30px;
+    flex-direction: column;
+}
+
+.about-column .about-box {
+    position: relative;
+    border-left: 2px solid #cd1212;
+    
+}
+
+.about-box .about-content {
+    position: relative;
+    padding-left: 27px;
+width: 100%;
+
+}
+
+.about-box .about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10.5px;
+    width: 20px;
+    height: 20px;
+    background: #cd1212;
+    border-radius: 50%;
+}
+
+.about-content .content {
+    padding: 24px;
+    border: 2px solid #cd1212;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+}
+.about-content .content:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+}
+
+
+.about-content .content .year {
+    font-size: 16px;
+    color: #cd1212;
+}
+
+.about-content .content .year i {
+    margin-right: 8px;
+}
+
+.about-content .content h3 {
+    font-size: 19px;
+    margin: 8px 0;
+    color: var(--main-color);
+    
+}
+.about-column .title {
+    margin: 8px 0;
+    color: #ff0000;
+    text-align: center;
+    font-size: 48px;
+
+}
+
+.about-content .content p {
+    font-size: 16px;
+}
+
+
+
+
+
+@keyframes show-right {
+    100% {
+        width: 0;
+    }
+}
+
+.container{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+/* timeline end*/
+
+
+
+
+/* SKİLLSET Begin*/
+
+.skillset {
+    padding: 10rem 15%;
+
+    color: var(--text-color);
+}
+
+.skillset h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: var(--main-color);
+}
+
+/* Kart Stili */
+.skill-category-card {
+    background: rgba(0, 0, 0, 0.5); /* Transparan arkaplan */
+   /* backdrop-filter: blur(10px);  Bulanık efekt */
+    border: 1px solid rgba(255, 0, 0 , 0.5); /* Hafif kenarlık */
+    border-radius: 15px; /* Yuvarlak köşeler */
+    padding: 2rem;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Sadece gölge ve kenarlık geçişi */
+    flex: 1 1 300px; /* Kartların esnek genişliği */
+    max-width: 400px; /* Kartların maksimum genişliği */
+    margin: 1rem; /* Kartlar arası boşluk */
+   
+    transition: 0.4s ease-in-out;
+}
+
+
+.skill-category-card:hover {
+    box-shadow: 0 0 20px var(--main-color), /* Kırmızı gölge */
+                0 0 40px var(--main-color),
+                0 0 80px var(--main-color);
+    border-color: var(--main-color); /* Kenarlık rengini kırmızı yap */
+}
+
+.skill-category {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Kartların yan yana gelmesini sağlar */
+    gap: 2rem; /* Kartlar arası boşluk */
+}
+
+.skill-category h3 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    width: 100%;
+    text-align: center;
+}
+
+/* Çizgi Şeklinde Progress Bar */
+.skill-chart {
+    width: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.skill-chart .skill-name {
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-chart .progress-bar {
+    width: 100%;
+    height: 10px; /* Progress bar kalınlığı */
+    background-color: var(--second-bg-color);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-chart .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--percentage); /* Progress bar genişliği */
+    height: 100%;
+    background-color: var(--main-color);
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+
+/*Arka PLan NOde */
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+
+
+/* REFERANCES Begin*/
+
+
+/* Referanslar Bölümü */
+.references {
+    padding: 10rem 15%;
+    position: relative;
+}
+
+.references h2 {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+    color: var(--main-color);
+}
+
+.reference-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.reference-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.3s ease-in-out;
+}
+
+.reference-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color);
+}
+
+.reference-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.reference-card .position {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.reference-card .relationship {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.contact-btn {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* Modal Stili */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 25px var(--main-color);
+    max-width: 500px;
+    width: 90%;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.modal-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.modal-content p {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+.close-btn {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 1.5rem;
+}
+
+.close-btn:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+}
+
+/* REFERANCES End*/
+/* CONTACT Begin*/
+
+/* Contact Me Bölümü *//* Contact Me Bölümü *//* Contact Me Bölümü *//* Contact Me Bölümü */
+.contact {
+    padding: 6rem 10%; /* Yükseklik azaltıldı, sağ-sol genişletildi */
+    background-color: rgba(0, 0, 0, 0.7); /* Daha koyu bir arkaplan */
+    border-radius: 15px;
+    box-shadow: 0 0 25px var(--main-color); /* Normal durumda glow efekti */
+    width: 100%;
+    max-width: 1200px; /* Kutu genişliği artırıldı */
+    transition: box-shadow 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
+    margin: 0 auto; /* Ortala */
+    min-height: auto; /* Yükseklik otomatik ayarlandı */
+}
+
+.contact:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color); /* Hover'da daha güçlü glow efekti */
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 4rem; /* Başlık boyutu büyük kaldı */
+    margin-bottom: 2rem;
+    color: var(--main-color);
+    text-transform: uppercase; /* Başlığı büyük harf yap */
+    letter-spacing: 2px; /* Harfler arası boşluk */
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center; /* İçerikleri dikeyde ortala */
+}
+
+.contact-form-container,
+.contact-info {
+    flex: 1;
+    padding: 1rem;
+}
+
+.contact-form-container {
+    border-right: 2px solid var(--main-color); /* Dikey çizgi */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1.6rem; /* Label boyutu büyük kaldı */
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500; /* Label'ları biraz kalın yap */
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 1.2rem; /* Input padding büyük kaldı */
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1.4rem; /* Input yazı boyutu büyük kaldı */
+    transition: border-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder rengi */
+    font-size: 1.4rem; /* Placeholder yazı boyutu büyük kaldı */
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--main-color);
+    outline: none;
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+.submit-btn {
+    background: var(--main-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 1.2rem; /* Buton padding büyük kaldı */
+    border-radius: 8px;
+    font-size: 1.6rem; /* Buton yazı boyutu büyük kaldı */
+    cursor: pointer;
+    transition: 0.4s ease-in-out, transform 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
+    text-transform: uppercase; /* Buton metnini büyük harf yap */
+    letter-spacing: 1px; /* Harfler arası boşluk */
+}
+
+.submit-btn:hover {
+    background: var(--bg-color);
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--main-color);
+}
+
+/* İletişim Bilgileri */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-info h3 {
+    font-size: 2.5rem; /* İletişim bilgileri başlık boyutu büyük kaldı */
+    margin-bottom: 1.5rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase; /* Başlığı büyük harf yap */
+    letter-spacing: 2px; /* Harfler arası boşluk */
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Hafif transparan arkaplan */
+    border-radius: 8px;
+    transition: background-color 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
+}
+
+.info-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover'da arkaplan rengini değiştir */
+}
+
+.info-item i {
+    font-size: 2rem; /* İkon boyutu büyük kaldı */
+    color: var(--main-color);
+}
+
+.info-item p {
+    font-size: 1.6rem; /* İletişim bilgileri yazı boyutu büyük kaldı */
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .contact {
+        padding: 6rem 5%; /* Mobilde daha az kenar boşluğu */
+    }
+
+    .contact h2 {
+        font-size: 3rem; /* Mobilde başlık boyutunu küçült */
+    }
+
+    .contact-container {
+        flex-direction: column; /* Mobilde dikey hizala */
+    }
+
+    .contact-form-container {
+        border-right: none; /* Mobilde dikey çizgiyi kaldır */
+        border-bottom: 2px solid var(--main-color); /* Yatay çizgi ekle */
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .contact-info h3 {
+        font-size: 2rem; /* Mobilde başlık boyutunu küçült */
+    }
+
+    .info-item p {
+        font-size: 1.4rem; /* Mobilde yazı boyutunu küçült */
+    }
+}
+
+
+
+/* Mobil ve küçük ekranlar için stil */
+@media (max-width: 768px) {
+    .about-row {
+        flex-direction: column; /* İçerikleri dikey hizala */
+        gap: 2rem; /* İçerikler arası boşluğu azalt */
+    }
+
+    .about-column {
+        width: 100%; /* Genişliği tam yap */
+    }
+
+    .about-box {
+        border-left: none; /* Sol çizgiyi kaldır */
+    }
+
+    .about-box .about-content::before {
+        display: none; /* Noktayı kaldır */
+    }
+
+    .about-content .content {
+        text-align: center; /* Metni ortala */
+    }
+}
