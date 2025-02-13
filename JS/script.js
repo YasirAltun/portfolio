@@ -38,30 +38,17 @@ class Node {
             this.vy = -this.vy;
         }
 
-        // Fareye doğru hafifçe hareket et
-            if(screen.width > 768){ 
-                if (mouse.x !== null && mouse.y !== null) {
-                const dx = mouse.x - this.x;
-                const dy = mouse.y - this.y;
-                const distance = Math.sqrt(dx * dx + dy * dy);
+        // Ekran genişliği 768'den büyükse ve fare hareketi varsa node'ları hareket ettir
+        if (window.innerWidth >= 768 && mouse.x !== null && mouse.y !== null) {
+            const dx = mouse.x - this.x;
+            const dy = mouse.y - this.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-                if (distance < 80) { // Fareye yakınsa hafifçe çek
-                    this.x += dx * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
-                    this.y += dy * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
-                    }
-                }
-            }if(screen.width < 768){
-                if (mouse.x !== null && mouse.y !== null) {
-                    const dx = mouse.x - this.x;
-                    const dy = mouse.y - this.y;
-                    const distance = Math.sqrt(dx * dx + dy * dy);
-    
-                    if (distance < 10001000000000) { // Fareye yakınsa hafifçe çek
-                        this.x += dx * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
-                        this.y += dy * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
-                        }
-                    }
+            if (distance < 80) { // Fareye yakınsa hafifçe çek
+                this.x += dx * 0.02;
+                this.y += dy * 0.02;
             }
+        }
 
         // Node'u hareket ettir
         this.x += this.vx;
@@ -109,27 +96,44 @@ function animate() {
     requestAnimationFrame(animate);
 }
 
-// Fare hareketini takip et
-window.addEventListener("mousemove", (e) => {
-    
-    mouse.x = e.clientX;
-    mouse.y = e.clientY;
-});
+// Fare hareketini takip et (sadece desktop için)
+if (window.innerWidth >= 768) {
+    window.addEventListener("mousemove", (e) => {
+        mouse.x = e.clientX;
+        mouse.y = e.clientY;
+    });
 
-// Fare sayfadan çıkınca sıfırla
-window.addEventListener("mouseout", () => {
-    mouse.x = null;
-    mouse.y = null;
-});
+    window.addEventListener("mouseout", () => {
+        mouse.x = null;
+        mouse.y = null;
+    });
+}
 
 // Pencere boyutu değiştiğinde canvas'ı yeniden boyutlandır
 window.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    // Ekran genişliği değiştiğinde fare hareketini yeniden kontrol et
+    if (window.innerWidth >= 768) {
+        window.addEventListener("mousemove", (e) => {
+            mouse.x = e.clientX;
+            mouse.y = e.clientY;
+        });
+
+        window.addEventListener("mouseout", () => {
+            mouse.x = null;
+            mouse.y = null;
+        });
+    } else {
+        // Mobil cihazlarda fare hareketini devre dışı bırak
+        mouse.x = null;
+        mouse.y = null;
+    }
 });
 
- // Node sayısını cihazın ekran genişliğine göre belirle
- function getNumberOfNodes() {
+// Node sayısını cihazın ekran genişliğine göre belirle
+function getNumberOfNodes() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 768) { // Mobil cihazlar
         return 100; // Mobilde daha az node
@@ -145,6 +149,7 @@ for (let i = 0; i < numberOfNodes; i++) {
     const y = Math.random() * canvas.height;
     nodes.push(new Node(x, y));
 }
+
 // Animasyonu başlat
 animate();
 
