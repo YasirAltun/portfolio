@@ -39,16 +39,29 @@ class Node {
         }
 
         // Fareye doğru hafifçe hareket et
-        if (mouse.x !== null && mouse.y !== null) {
-            const dx = mouse.x - this.x;
-            const dy = mouse.y - this.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
+            if(screen.width > 768){ 
+                if (mouse.x !== null && mouse.y !== null) {
+                const dx = mouse.x - this.x;
+                const dy = mouse.y - this.y;
+                const distance = Math.sqrt(dx * dx + dy * dy);
 
-            if (distance < 80) { // Fareye yakınsa hafifçe çek
-                this.x += dx * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
-                this.y += dy * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
+                if (distance < 80) { // Fareye yakınsa hafifçe çek
+                    this.x += dx * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
+                    this.y += dy * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
+                    }
+                }
+            }if(screen.width < 768){
+                if (mouse.x !== null && mouse.y !== null) {
+                    const dx = mouse.x - this.x;
+                    const dy = mouse.y - this.y;
+                    const distance = Math.sqrt(dx * dx + dy * dy);
+    
+                    if (distance < 10001000000000) { // Fareye yakınsa hafifçe çek
+                        this.x += dx * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
+                        this.y += dy * 0.02; // 0.01 yerine 0.03 yaparak hızı artır
+                        }
+                    }
             }
-        }
 
         // Node'u hareket ettir
         this.x += this.vx;
@@ -98,6 +111,7 @@ function animate() {
 
 // Fare hareketini takip et
 window.addEventListener("mousemove", (e) => {
+    
     mouse.x = e.clientX;
     mouse.y = e.clientY;
 });
