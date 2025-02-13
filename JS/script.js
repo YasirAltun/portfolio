@@ -114,14 +114,23 @@ window.addEventListener("resize", () => {
     canvas.height = window.innerHeight;
 });
 
+ // Node sayısını cihazın ekran genişliğine göre belirle
+ function getNumberOfNodes() {
+    const screenWidth = window.innerWidth;
+    if (screenWidth < 768) { // Mobil cihazlar
+        return 100; // Mobilde daha az node
+    } else { // Desktop cihazlar
+        return 400; // Desktop'ta daha fazla node
+    }
+}
+
 // Node'ları oluştur
-const numberOfNodes = 200; // Node sayısını buradan ayarla
+const numberOfNodes = getNumberOfNodes(); // Cihaza göre node sayısı
 for (let i = 0; i < numberOfNodes; i++) {
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height;
     nodes.push(new Node(x, y));
 }
-
 // Animasyonu başlat
 animate();
 
