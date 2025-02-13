@@ -132,6 +132,25 @@ section{
     font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.8;
+    /* ***********************************
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);*******************************/
+    
+    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 0, 0 , 0.5); /* Hafif kenarlık */
+    backdrop-filter: blur(10px);  /*Bulanık efekt */
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+
+
+}
+.home-content p:hover{
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 50px var(--main-color),
+                0 0 100px var(--main-color);
+    transition: 0.4s ease-in-out;
 }
 .home-img img{
     width: 32vw;
@@ -287,7 +306,7 @@ section{
 .about-box .about-content {
     position: relative;
     padding-left: 27px;
-width: 100%;
+    width: 100%;
 
 }
 
@@ -309,6 +328,8 @@ width: 100%;
     margin-bottom: 32px;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.4s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
 }
 .about-content .content:hover{
     box-shadow: 0 0 25px var(--main-color),
@@ -380,10 +401,10 @@ width: 100%;
     color: var(--main-color);
 }
 
-/* Kart Stili */
+/* Kart Stili *************************************************************************/
 .skill-category-card {
     background: rgba(0, 0, 0, 0.5); /* Transparan arkaplan */
-   /* backdrop-filter: blur(10px);  Bulanık efekt */
+    backdrop-filter: blur(10px);  /*Bulanık efekt */
     border: 1px solid rgba(255, 0, 0 , 0.5); /* Hafif kenarlık */
     border-radius: 15px; /* Yuvarlak köşeler */
     padding: 2rem;
@@ -496,6 +517,7 @@ canvas {
     padding: 2rem;
     box-shadow: 0 0 25px var(--main-color);
     transition: 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 .reference-card:hover {
@@ -627,6 +649,7 @@ canvas {
     transition: box-shadow 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
     margin: 0 auto; /* Ortala */
     min-height: auto; /* Yükseklik otomatik ayarlandı */
+    backdrop-filter: blur(10px);
 }
 
 .contact:hover {
