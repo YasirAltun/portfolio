@@ -1,4 +1,3 @@
-// Arka plan animasyonu için kod
 const canvas = document.getElementById("background");
 const ctx = canvas.getContext("2d");
 
@@ -8,6 +7,14 @@ canvas.height = window.innerHeight;
 const nodes = [];
 const mouse = { x: null, y: null };
 
+// CSS değişkenlerini al
+const rootStyles = getComputedStyle(document.documentElement);
+const lightModeElement = document.querySelector('body.lightmode');
+
+// Renk değişkenlerini al
+const nodeColor = getComputedStyle(lightModeElement || document.documentElement).getPropertyValue('--node-color').trim();
+const edgeColor = getComputedStyle(lightModeElement || document.documentElement).getPropertyValue('--edge-color').trim();
+
 // Node (Düğüm) Sınıfı
 class Node {
     constructor(x, y) {
@@ -16,7 +23,7 @@ class Node {
         this.vx = Math.random() * 2 - 1; // Rastgele hız (x ekseni)
         this.vy = Math.random() * 2 - 1; // Rastgele hız (y ekseni)
         this.radius = 3; // Node boyutu
-        this.color = "#fff"; // Beyaz renk
+        this.color = `rgb(${nodeColor})`; // CSS'ten alınan renk
     }
 
     // Node'u çiz
@@ -74,7 +81,7 @@ function drawConnections() {
                 ctx.beginPath();
                 ctx.moveTo(nodes[i].x, nodes[i].y);
                 ctx.lineTo(nodes[j].x, nodes[j].y);
-                ctx.strokeStyle = `rgba(205, 18, 18, ${alpha})`; // Kırmızı renk ve opaklık
+                ctx.strokeStyle = `rgba(${edgeColor}, ${alpha})`; // CSS'ten alınan renk ve opaklık
                 ctx.lineWidth = 1;
                 ctx.stroke();
                 ctx.closePath();
@@ -152,7 +159,6 @@ for (let i = 0; i < numberOfNodes; i++) {
 
 // Animasyonu başlat
 animate();
-
 // Referanslar bölümü için kod
 async function fetchReferences() {
     const response = await fetch("JS/references.json");
@@ -269,3 +275,4 @@ document.querySelector(".contact-form").addEventListener("submit", function (e) 
 
 
 
+//darkmode ve lightmode  değişimleri 
