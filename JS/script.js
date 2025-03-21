@@ -248,31 +248,4 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     });
 });
-
-
-// Form gönderimini işle
-document.querySelector(".contact-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Formun varsayılan davranışını engelle
-
-    // Form verilerini al
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-
-    // Form verilerini konsola yazdır (şimdilik)
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Message:", message);
-
-    // Formu temizle
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("message").value = "";
-
-    // Kullanıcıya geri bildirim göster (örneğin, bir toast mesajı)
-    alert("Message sent successfully!");
-});
-
-
-
-//darkmode ve lightmode  değişimleri 
+//dark mode işleri 
