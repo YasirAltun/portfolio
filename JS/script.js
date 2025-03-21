@@ -9,7 +9,7 @@ const mouse = { x: null, y: null };
 
 // CSS değişkenlerini al
 const rootStyles = getComputedStyle(document.documentElement);
-const lightModeElement = document.querySelector('body.lightmode');
+const lightModeElement = document.querySelector('body.darkmode');
 
 // Renk değişkenlerini al
 const nodeColor = getComputedStyle(lightModeElement || document.documentElement).getPropertyValue('--node-color').trim();
