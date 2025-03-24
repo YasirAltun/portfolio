@@ -10,19 +10,19 @@
 
 :root{
     --bg-color:  rgb(255, 255, 255);
-    --second-bg-color: rgb(254,254,254);
+    --second-bg-color: rgb(194,194,194);
     --text-color:rgb(0,0,0);
-    --main-color: rgb(0,0,255); /* Turkuaz rengi */
+    --main-color: rgb(0,198,0); /* Turkuaz rengi */
     --node-color: 0, 0, 0; /* RGB formatında (beyaz) */
-    --edge-color: 0,0,255 ; /* Turkuaz rengi (RGB formatında) */
+    --edge-color: 0,255, 0 ; /* Turkuaz rengi (RGB formatında) */
     
 
 }
 
 .darkmode{
     --bg-color: rgb(8,8,8);
-    --second-bg-color: rgb(16,16,16);
-    --text-color:rgb(255, 255, 255);
+    --second-bg-color:rgb(47, 47, 47);
+    --text-color:rgb(155, 155, 155);
     --main-color: rgb(205, 18, 18); /* Turkuaz rengi */
     --node-color: 255, 255, 255 ; /* RGB formatında (beyaz) */
     --edge-color: 205, 18, 18; /* Turkuaz rengi (RGB formatında) */
@@ -33,7 +33,7 @@
 
 
 html{
-    font-size: 60%;
+    font-size: 80%;
     overflow-x: hidden;
 
 }
@@ -96,32 +96,9 @@ span{
 
 
 
-
-
-
-
-.gradient-btn{
-    background: linear-gradient(270deg,#7a0000 10%,#cd1212 100%);
-
-    color: var(--bg-color);
-    border: none;
-    border-radius: 3rem;
-    padding: 1rem 2rem;
-    font-size: 1.8rem;
-    letter-spacing: 1px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-    text-wrap: nowrap;
-
-}
-.gradient-btn:hover{
-    transform: scale(1.05);
-}
-
 section{
     padding: 10rem 15%;
-    min-height: 90vh;
+    min-height: 10vh;
 }
 .home{
     display: flex;
@@ -206,7 +183,7 @@ section{
     }
 
     .home-img img {
-        width: 60vw;
+        width: 100vw;
     }
 }
 
@@ -331,10 +308,10 @@ section{
 }
 
 .about-box .about-content::before {
-    content: '';
+    content: "";
     position: absolute;
-    top: 0;
-    left: -10.5px;
+    top:0;
+    left: -10.8px;
     width: 20px;
     height: 20px;
     background:var(--main-color);
@@ -541,7 +518,7 @@ canvas {
 }
 
 .reference-card:hover {
-    transform: scale(1.05);
+   /* transform: scale(1.1);*/
     box-shadow: 0 0 25px var(--main-color),
                 0 0 50px var(--main-color);
 }
@@ -603,7 +580,7 @@ canvas {
 }
 
 .modal-content {
-    background: var(--second-bg-color);
+    background: var(--second-bg-color) alpha(0.5);
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
@@ -665,7 +642,7 @@ canvas {
     border-radius: 15px;
     box-shadow: 0 0 25px var(--main-color); /* Normal durumda glow efekti */
     width: 100%;
-    max-width: 1200px; /* Kutu genişliği artırıldı */
+    max-width: 1200px;  /*Kutu genişliği artırıldı */
     transition: box-shadow 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
     margin: 0 auto; /* Ortala */
     min-height: auto; /* Yükseklik otomatik ayarlandı */
@@ -795,13 +772,13 @@ canvas {
     gap: 1rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.1); /* Hafif transparan arkaplan */
+    background-color: var(--second-bg-color) ; /* Hafif transparan arkaplan */
     border-radius: 8px;
     transition: background-color 0.4s ease-in-out; /* Diğer bileşenlerle aynı süre */
 }
 
 .info-item:hover {
-    background-color: rgba(var(--bg-color), 0.2); /* Hover'da arkaplan rengini değiştir */
+    background-color: var(--bg-color); /* Hover'da arkaplan rengini değiştir */
 }
 
 .info-item i {

@@ -143,9 +143,9 @@ window.addEventListener("resize", () => {
 function getNumberOfNodes() {
     const screenWidth = window.innerWidth;
     if (screenWidth < 768) { // Mobil cihazlar
-        return 100; // Mobilde daha az node
+        return 250; // Mobilde daha az node
     } else { // Desktop cihazlar
-        return 400; // Desktop'ta daha fazla node
+        return 500; // Desktop'ta daha fazla node
     }
 }
 
@@ -249,3 +249,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
 });
 //dark mode işleri 
+
+
