@@ -250,4 +250,3 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 //dark mode işleri 
 
-
