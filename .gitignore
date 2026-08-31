@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Original demo the background was ported from — kept locally for reference,
+# not part of the site.
+a-twisted-stream/
+a-twisted-stream.zip
+
+# Unprocessed source images and documents. Only the optimised versions under
+# images/ and assets/ are served.
+/*.PNG
+/*.png
+/*.jpg
+/*.jpeg
+/*.pdf
+
+node_modules/

@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>A.Yasir Altun — Software Engineer</title>
+    <meta
+      name="description"
+      content="Abdurrahman Yasir Altun — Software Engineer. Applied AI and machine learning, speech technologies, Android and full-stack development."
+    />
+    <meta name="theme-color" content="#08080a" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A.Yasir Altun — Software Engineer" />
+    <meta
+      property="og:description"
+      content="Software Engineer. Applied AI, speech technologies, Android and full-stack development."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="./CSS/style.css" />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23cd1212'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='16' font-weight='700' fill='%23fff' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E"
+    />
+
+    <script>
+      // Applied before first paint so the page never flashes the wrong theme.
+      (function () {
+        var stored = null;
+        try {
+          stored = localStorage.getItem("theme");
+        } catch (error) {
+          /* private mode — fall back to the system preference */
+        }
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+        document.documentElement.dataset.theme =
+          stored === "light" || stored === "dark" ? stored : prefersLight ? "light" : "dark";
+
+        // A saved accent colour, applied now so the page never flashes the
+        // theme accent before the script refines its text shade.
+        try {
+          var accent = localStorage.getItem("accent-color");
+          if (accent && /^#?[0-9a-fA-F]{6}$/.test(accent)) {
+            var hex = accent.replace("#", "");
+            var root = document.documentElement.style;
+            root.setProperty(
+              "--accent-rgb",
+              parseInt(hex.slice(0, 2), 16) +
+                " " +
+                parseInt(hex.slice(2, 4), 16) +
+                " " +
+                parseInt(hex.slice(4, 6), 16),
+            );
+            root.setProperty("--accent-text", "#" + hex);
+          }
+        } catch (error) {
+          /* storage blocked — the script will apply the accent a beat later */
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+
+    <canvas id="stream-canvas" class="stream-canvas" aria-hidden="true"></canvas>
+    <div class="stream-scrim" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="#home">A.Yasir <span class="logo__accent">ALTUN</span></a>
+
+        <nav class="nav" id="primary-nav" aria-label="Primary">
+          <a href="#home" data-i18n="nav.home">Home</a>
+          <a href="#about" data-i18n="nav.about">About</a>
+          <a href="#skills" data-i18n="nav.skills">Skills</a>
+          <a href="#projects" data-i18n="nav.projects">Projects</a>
+          <a href="#references" data-i18n="nav.references">References</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+
+        <div class="site-header__actions">
+          <div class="language" id="language">
+            <button
+              type="button"
+              class="icon-button language__toggle"
+              id="language-toggle"
+              aria-expanded="false"
+              aria-controls="language-menu"
+              data-i18n-aria-label="a11y.language"
+            >
+              <i class="bx bx-globe" aria-hidden="true"></i>
+              <span id="language-current">EN</span>
+            </button>
+            <div class="language__menu" id="language-menu" hidden></div>
+          </div>
+
+          <button
+            type="button"
+            class="icon-button"
+            id="theme-toggle"
+            aria-label="Switch to light theme"
+          >
+            <i class="bx bx-sun" aria-hidden="true"></i>
+          </button>
+
+          <button
+            type="button"
+            class="icon-button nav-toggle"
+            id="nav-toggle"
+            aria-controls="primary-nav"
+            aria-expanded="false"
+            aria-label="Open navigation menu"
+          >
+            <i class="bx bx-menu" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero -->
+      <section class="section hero" id="home">
+        <div class="hero__content reveal">
+          <h1 class="hero__title">
+            <span data-i18n="hero.greeting">Hi, I'm</span>
+            <span class="accent">A.Yasir ALTUN</span>
+          </h1>
+
+          <p class="hero__lead" data-i18n="hero.lead1">
+            A Software Engineer and a graduate of the Software Engineering programme at Fırat
+            University's Faculty of Technology.
+          </p>
+          <p class="hero__lead hero__lead--muted" data-i18n="hero.lead2">
+            I'm comfortable at most layers of a system, and I'm drawn to problems that take
+            equal parts engineering and research — learning fastest by building something end
+            to end.
+          </p>
+        </div>
+
+        <div class="hero__media reveal">
+          <!-- Backgrounds are removed from the source photos, so there is no
+               frame and no letterboxing — the subject simply stands on the
+               page, lit from behind so a dark suit still reads on a dark page. -->
+          <div class="portrait" id="portrait">
+            <figure class="portrait__slide portrait__slide--bust is-active">
+              <img
+                src="./images/cutout-headshot.webp"
+                alt="A.Yasir Altun"
+                width="965"
+                height="1000"
+                fetchpriority="high"
+              />
+            </figure>
+          </div>
+        </div>
+
+        <!-- One band across the foot of the hero: the actions on the left and
+             the live Spotify strips filling the width beside them. -->
+        <div class="hero__footer reveal">
+          <div class="hero__actions">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://github.com/YasirAltun"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n-aria-label="a11y.github"
+                >
+                  <i class="bx bxl-github" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/cybersurgeon/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n-aria-label="a11y.linkedin"
+                >
+                  <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/yasiraltun0/"
+                  target="_blank"
+                  rel="noopener"
+                  data-i18n-aria-label="a11y.instagram"
+                >
+                  <i class="bx bxl-instagram-alt" aria-hidden="true"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Rendered from the JSON feed by main.js. The markup below is the
+               resting state: it holds the strips' height so nothing jumps when
+               the data lands, and it is what visitors without JS keep. -->
+          <div class="spotify-strips" id="spotify-strips" data-state="loading">
+            <a
+              class="strip strip--now"
+              id="strip-now"
+              href="https://open.spotify.com/user/3136uswhefbuxjtxy6qghln5njrq"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="strip__art" aria-hidden="true"></span>
+              <span class="strip__text">
+                <span class="strip__title"><span><span>…</span></span></span>
+                <span class="strip__artist"><span><span>Spotify</span></span></span>
+              </span>
+              <span class="strip__progress" aria-hidden="true"><b></b></span>
+            </a>
+
+            <a
+              class="strip strip--recent"
+              id="strip-recent"
+              href="https://open.spotify.com/user/3136uswhefbuxjtxy6qghln5njrq"
+              target="_blank"
+              rel="noopener"
+            >
+              <span class="strip__slide">
+                <span class="strip__art" aria-hidden="true"></span>
+                <span class="strip__text">
+                  <span class="strip__title"><span><span>…</span></span></span>
+                  <span class="strip__artist"><span><span>Spotify</span></span></span>
+                </span>
+                <span class="strip__ago" aria-hidden="true"></span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="section" id="about">
+        <header class="section__head reveal">
+          <h2 class="section__title" data-i18n="about.title">About</h2>
+          <p class="section__subtitle" data-i18n="about.subtitle">
+            Where I studied and where I've worked.
+          </p>
+        </header>
+
+        <div class="timeline-grid">
+          <div class="timeline reveal">
+            <h3 class="timeline__title" data-i18n="about.experience">Experience</h3>
+
+            <ol class="timeline__list">
+              <li class="timeline__item">
+                <p class="timeline__date">
+                  <i class="bx bxs-calendar" aria-hidden="true"></i>
+                  <span data-i18n="about.job1Date">Aug 2025 — Present</span>
+                </p>
+                <h4 data-i18n="about.job1Title">Software Engineer — TelcoreX</h4>
+                <p class="timeline__place" data-i18n="about.job1Place">İstanbul, Türkiye</p>
+                <ul class="timeline__points">
+                  <li data-i18n="about.job1Point1">Android, Java, PHP, S3/MinIO and Linux.</li>
+                </ul>
+              </li>
+
+              <li class="timeline__item">
+                <p class="timeline__date">
+                  <i class="bx bxs-calendar" aria-hidden="true"></i>
+                  <span data-i18n="about.job2Date">Oct 2023 — Jan 2024</span>
+                </p>
+                <h4 data-i18n="about.job2Title">Intern Software Engineer — AGMLab</h4>
+                <p class="timeline__place" data-i18n="about.job2Place">Ankara, Türkiye</p>
+                <ul class="timeline__points">
+                  <li data-i18n="about.job2Point1">Java, Spring Boot, ReactJS, HTML and CSS.</li>
+                </ul>
+              </li>
+
+              <li class="timeline__item">
+                <p class="timeline__date">
+                  <i class="bx bxs-calendar" aria-hidden="true"></i>
+                  <span data-i18n="about.job3Date">Jul 2023 — Aug 2023</span>
+                </p>
+                <h4 data-i18n="about.job3Title">Intern Software Engineer — TelcoreX</h4>
+                <p class="timeline__place" data-i18n="about.job3Place">İstanbul, Türkiye</p>
+                <ul class="timeline__points">
+                  <li data-i18n="about.job3Point1">Python, Android Studio, C# and Linux tooling.</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+
+          <div class="timeline reveal">
+            <h3 class="timeline__title" data-i18n="about.education">Education</h3>
+
+            <ol class="timeline__list">
+              <li class="timeline__item">
+                <p class="timeline__date">
+                  <i class="bx bxs-calendar" aria-hidden="true"></i>
+                  <span data-i18n="about.eduDate">Aug 2019 — Feb 2025</span>
+                </p>
+                <h4 data-i18n="about.eduTitle">BSc Software Engineering</h4>
+                <p class="timeline__place" data-i18n="about.eduPlace">
+                  Fırat University, Faculty of Technology — Elazığ
+                </p>
+                <ul class="timeline__points">
+                  <li data-i18n="about.eduPoint1">Final grade 3.06 · 240 ECTS · EQF level 7</li>
+                  <li data-i18n="about.eduPoint2">
+                    Focus on software development, databases and networks, and data science.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+
+            <h3
+              class="timeline__title timeline__title--spaced"
+              data-i18n="about.certifications"
+            >
+              Certifications
+            </h3>
+
+            <ul class="cert-list">
+              <li class="cert">
+                <a
+                  class="cert__name"
+                  href="https://api-prod.programminghub.io/v5/api/certificate/file/pdf/5c82db276b6b7377667e28f0710e97d8/Machine+Learning"
+                  target="_blank"
+                  rel="noopener"
+                  >Machine Learning</a
+                >
+                <span class="cert__meta">Programming Hub · 2025</span>
+              </li>
+              <li class="cert">
+                <a
+                  class="cert__name"
+                  href="https://api-prod.programminghub.io/v5/api/certificate/file/pdf/5c82db276b6b7377667e28f0710e97d8/Artificial+Intelligence"
+                  target="_blank"
+                  rel="noopener"
+                  >Artificial Intelligence</a
+                >
+                <span class="cert__meta">Programming Hub · 2025</span>
+              </li>
+              <li class="cert">
+                <a
+                  class="cert__name"
+                  href="https://www.udemy.com/certificate/UC-66850515-3981-4ae1-8e87-44c166d61260/"
+                  target="_blank"
+                  rel="noopener"
+                  >Advanced Algorithm Analysis and C Programming</a
+                >
+                <span class="cert__meta">Udemy · 2025</span>
+              </li>
+              <li class="cert">
+                <a
+                  class="cert__name"
+                  href="https://www.udemy.com/certificate/UC-10516333-a8a0-4d7f-a900-e77a6f7671cd/"
+                  target="_blank"
+                  rel="noopener"
+                  >Data Structures and Algorithms</a
+                >
+                <span class="cert__meta">Udemy · 2024</span>
+              </li>
+              <li class="cert">
+                <a
+                  class="cert__name"
+                  href="https://www.udemy.com/certificate/UC-50a5ff1a-50d9-4928-8ab6-ba43066239dd/"
+                  target="_blank"
+                  rel="noopener"
+                  >Differential Equations</a
+                >
+                <span class="cert__meta">Udemy · 2023</span>
+              </li>
+              <li class="cert">
+                <a
+                  class="cert__name"
+                  href="https://www.udemy.com/certificate/UC-04153d33-19df-4194-a23a-dad336408851/"
+                  target="_blank"
+                  rel="noopener"
+                  >Linear Algebra</a
+                >
+                <span class="cert__meta">Udemy · 2021</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <header class="section__head reveal">
+          <h2 class="section__title" data-i18n="skills.title">Skillset</h2>
+          <p class="section__subtitle" data-i18n="skills.subtitle">
+            Tools and languages I reach for most often.
+          </p>
+        </header>
+
+        <div class="skill-grid">
+          <article class="card skill-card reveal">
+            <h3 class="card__title" data-i18n="skills.languages">Languages</h3>
+            <ul class="chip-list">
+              <li class="chip">Python</li>
+              <li class="chip">Java</li>
+              <li class="chip">C#</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">C / C++</li>
+              <li class="chip">PHP</li>
+              <li class="chip">SQL</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card__title" data-i18n="skills.ai">AI &amp; Machine Learning</h3>
+            <ul class="chip-list">
+              <li class="chip">TensorFlow / Keras</li>
+              <li class="chip">Speech-to-Text</li>
+              <li class="chip">Text-to-Speech</li>
+              <li class="chip" data-i18n="skills.chipEmotion">Speech emotion recognition</li>
+              <li class="chip" data-i18n="skills.chipDetection">YOLOv8 / object detection</li>
+              <li class="chip" data-i18n="skills.chipS2S">Speech-to-Speech training</li>
+              <li class="chip" data-i18n="skills.chipAudioAdv">Advanced audio analysis</li>
+              <li class="chip">NLP</li>
+              <li class="chip" data-i18n="skills.chipImaging">Image processing</li>
+              <li class="chip" data-i18n="skills.chipNeural">Neural networks</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card__title" data-i18n="skills.web">Web &amp; Backend</h3>
+            <ul class="chip-list">
+              <li class="chip">Spring Boot</li>
+              <li class="chip">ASP.NET MVC</li>
+              <li class="chip">Node.js</li>
+              <li class="chip">Flask</li>
+              <li class="chip">Slim Framework</li>
+              <li class="chip">React</li>
+              <li class="chip">HTML / CSS</li>
+              <li class="chip">Bootstrap</li>
+              <li class="chip">MVC</li>
+              <li class="chip">REST APIs</li>
+              <li class="chip">Web API</li>
+              <li class="chip">JSON</li>
+              <li class="chip">WebSocket</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card__title" data-i18n="skills.data">Data &amp; Storage</h3>
+            <ul class="chip-list">
+              <li class="chip">MSSQL</li>
+              <li class="chip">MySQL / MariaDB</li>
+              <li class="chip">Galera Cluster</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">Oracle</li>
+              <li class="chip">S3 / MinIO</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card__title" data-i18n="skills.platforms">Platforms &amp; Tools</h3>
+            <ul class="chip-list">
+              <li class="chip">Linux</li>
+              <li class="chip">Kali Linux</li>
+              <li class="chip">Android / AOSP</li>
+              <li class="chip">Git &amp; GitHub</li>
+              <li class="chip">Postman</li>
+              <li class="chip">Android Studio</li>
+              <li class="chip">Visual Studio</li>
+              <li class="chip">VS Code</li>
+              <li class="chip">MATLAB</li>
+              <li class="chip">Jira / ClickUp / Trello</li>
+            </ul>
+          </article>
+
+          <article class="card skill-card reveal">
+            <h3 class="card__title" data-i18n="skills.practices">Practices</h3>
+            <ul class="chip-list">
+              <li class="chip">OOP</li>
+              <li class="chip" data-i18n="skills.chipMultiTenant">Multi-tenant architecture</li>
+              <li class="chip" data-i18n="skills.chipPatterns">Design patterns</li>
+              <li class="chip" data-i18n="skills.chipStructures">Data structures &amp; algorithms</li>
+              <li class="chip">Agile / Scrum</li>
+              <li class="chip" data-i18n="skills.chipTesting">Unit &amp; integration testing</li>
+              <li class="chip" data-i18n="skills.chipReview">Code review</li>
+              <li class="chip">UML</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="card language-card reveal">
+          <h3 class="card__title" data-i18n="skills.spoken">Spoken languages</h3>
+          <ul class="language-list">
+            <li>
+              <strong data-i18n="skills.turkish">Turkish</strong>
+              <span data-i18n="skills.native">Native</span>
+            </li>
+            <li>
+              <strong data-i18n="skills.english">English</strong>
+              <span>B1</span>
+            </li>
+          </ul>
+          <p class="card__note" data-i18n="skills.englishDetail">
+            Listening, reading, writing and speaking
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section class="section" id="projects">
+        <header class="section__head reveal">
+          <h2 class="section__title" data-i18n="projects.title">Projects</h2>
+        </header>
+
+        <p class="projects__cv-note reveal" data-i18n="projects.cvNote">
+          My project work is shared together with my CV.
+        </p>
+      </section>
+
+      <!-- References -->
+      <section class="section" id="references">
+        <header class="section__head reveal">
+          <h2 class="section__title" data-i18n="references.title">References</h2>
+          <p class="section__subtitle" data-i18n="references.subtitle">
+            People who can speak to how I work.
+          </p>
+        </header>
+
+        <div class="reference-grid" id="reference-grid">
+          <p class="reference-grid__status" id="reference-status" data-i18n="references.loading">
+            Loading references…
+          </p>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <header class="section__head reveal">
+          <h2 class="section__title" data-i18n="contact.title">Contact</h2>
+          <p class="section__subtitle" data-i18n="contact.subtitle">
+            The fastest way to reach me is email.
+          </p>
+        </header>
+
+        <div class="card contact-card reveal">
+          <ul class="contact-list">
+            <li class="contact-item">
+              <i class="bx bx-envelope" aria-hidden="true"></i>
+              <div>
+                <p class="contact-item__label" data-i18n="contact.emailLabel">Email</p>
+                <a href="mailto:ayasiraltun@gmail.com">ayasiraltun@gmail.com</a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
+              <div>
+                <p class="contact-item__label" data-i18n="contact.linkedinLabel">LinkedIn</p>
+                <a href="https://www.linkedin.com/in/cybersurgeon/" target="_blank" rel="noopener">
+                  /in/cybersurgeon
+                </a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <i class="bx bxl-github" aria-hidden="true"></i>
+              <div>
+                <p class="contact-item__label" data-i18n="contact.githubLabel">GitHub</p>
+                <a href="https://github.com/YasirAltun" target="_blank" rel="noopener">
+                  /YasirAltun
+                </a>
+              </div>
+            </li>
+            <li class="contact-item">
+              <i class="bx bxl-instagram-alt" aria-hidden="true"></i>
+              <div>
+                <p class="contact-item__label" data-i18n="contact.instagramLabel">Instagram</p>
+                <a href="https://www.instagram.com/yasiraltun0/" target="_blank" rel="noopener">
+                  @yasiraltun0
+                </a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="button-row button-row--flush">
+            <a
+              class="button button--primary"
+              href="mailto:ayasiraltun@gmail.com"
+              data-i18n="contact.send"
+              >Send an email</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="footer-year">2026</span> A.Yasir Altun</p>
+      <p class="site-footer__note"><em>CyberSurgeon</em></p>
+    </footer>
+
+    <!-- Background controls. Hidden entirely when the simulation cannot run. -->
+    <div class="settings" id="settings" hidden>
+      <button
+        type="button"
+        class="icon-button settings__toggle"
+        id="settings-toggle"
+        aria-expanded="false"
+        aria-controls="settings-panel"
+        data-i18n-aria-label="a11y.settings"
+      >
+        <i class="bx bx-slider-alt" aria-hidden="true"></i>
+      </button>
+
+      <section class="settings__panel" id="settings-panel" aria-labelledby="settings-title" hidden>
+        <header class="settings__head">
+          <h2 class="settings__title" id="settings-title" data-i18n="settings.title">
+            Background
+          </h2>
+          <button
+            type="button"
+            class="settings__close"
+            id="settings-close"
+            data-i18n-aria-label="a11y.settingsClose"
+          >
+            <i class="bx bx-x" aria-hidden="true"></i>
+          </button>
+        </header>
+
+        <div class="field field--inline">
+          <label for="set-pointer" data-i18n="settings.pointer">Mouse interaction</label>
+          <input type="checkbox" id="set-pointer" class="switch" />
+        </div>
+
+        <div class="field">
+          <label for="set-particles">
+            <span data-i18n="settings.particles">Particles</span>
+            <output id="out-particles"></output>
+          </label>
+          <input type="range" id="set-particles" min="0" max="8" step="1" />
+        </div>
+
+        <div class="field">
+          <label for="set-speed">
+            <span data-i18n="settings.speed">Speed</span>
+            <output id="out-speed"></output>
+          </label>
+          <input type="range" id="set-speed" min="0.2" max="2.5" step="0.1" />
+        </div>
+
+        <div class="field field--inline">
+          <label for="set-color" data-i18n="settings.color">Colour</label>
+          <input type="color" id="set-color" class="settings__color" />
+        </div>
+
+        <p class="settings__group" data-i18n="settings.camera">Camera</p>
+
+        <div class="field field--inline">
+          <label for="set-autorotate" data-i18n="settings.autoRotate">Auto-rotate</label>
+          <input type="checkbox" id="set-autorotate" class="switch" />
+        </div>
+
+        <div class="field">
+          <label for="set-zoom">
+            <span data-i18n="settings.zoom">Zoom</span>
+            <output id="out-zoom"></output>
+          </label>
+          <input type="range" id="set-zoom" min="0.5" max="1.8" step="0.05" />
+        </div>
+
+        <div class="field">
+          <label for="set-yaw">
+            <span data-i18n="settings.rotate">Rotate</span>
+            <output id="out-yaw"></output>
+          </label>
+          <input type="range" id="set-yaw" min="-60" max="60" step="1" />
+        </div>
+
+        <div class="field">
+          <label for="set-pitch">
+            <span data-i18n="settings.tilt">Tilt</span>
+            <output id="out-pitch"></output>
+          </label>
+          <input type="range" id="set-pitch" min="-35" max="35" step="1" />
+        </div>
+
+        <button type="button" class="button button--ghost settings__reset" id="settings-reset">
+          <i class="bx bx-reset" aria-hidden="true"></i>
+          <span data-i18n="settings.reset">Reset to defaults</span>
+        </button>
+      </section>
+    </div>
+
+    <dialog class="modal" id="reference-modal" aria-labelledby="modal-name">
+      <button
+        type="button"
+        class="modal__close"
+        id="modal-close"
+        data-i18n-aria-label="a11y.dialogClose"
+      >
+        <i class="bx bx-x" aria-hidden="true"></i>
+      </button>
+
+      <div class="modal__body">
+        <div class="modal__avatar" id="modal-avatar"></div>
+        <h3 id="modal-name"></h3>
+        <p class="modal__position" id="modal-position"></p>
+
+        <dl class="modal__details">
+          <div>
+            <dt data-i18n="references.email">Email</dt>
+            <dd id="modal-email"></dd>
+          </div>
+        </dl>
+      </div>
+    </dialog>
+
+    <script type="module" src="./JS/main.js"></script>
+  </body>
+</html>

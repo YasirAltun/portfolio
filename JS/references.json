@@ -1,0 +1,137 @@
+[
+  {
+    "name": "Ahmet Bedri ÖZER",
+    "email": "ozerbedri@gmail.com",
+    "image": "./images/ahmetbedrihoca.jpg",
+    "relationship": {
+      "en": "Professor / General Manager",
+      "tr": "Profesör / Genel Müdür",
+      "de": "Professor / Geschäftsführer"
+    },
+    "position": {
+      "en": "Professor at Fırat University, Computer Engineering. General Manager at Narveri.",
+      "tr": "Fırat Üniversitesi Bilgisayar Mühendisliği Profesörü. Narveri Genel Müdürü.",
+      "de": "Professor für Informatik an der Fırat-Universität. Geschäftsführer bei Narveri."
+    }
+  },
+  {
+    "name": "Resul DAŞ",
+    "email": "rdas@firat.edu.tr",
+    "image": "./images/resulhoca.png",
+    "relationship": {
+      "en": "Supervisor & Professor",
+      "tr": "Danışman ve Profesör",
+      "de": "Betreuer & Professor"
+    },
+    "position": {
+      "en": "Professor at Fırat University, Faculty of Technology, Software Engineering.",
+      "tr": "Fırat Üniversitesi Teknoloji Fakültesi Yazılım Mühendisliği Profesörü.",
+      "de": "Professor für Softwaretechnik an der Fakultät für Technologie der Fırat-Universität."
+    }
+  },
+  {
+    "name": "Ferhat UÇAR",
+    "email": "ferhatucar01@gmail.com",
+    "image": "./images/ferhathoca.jpg",
+    "relationship": {
+      "en": "Supervisor & Professor",
+      "tr": "Danışman ve Profesör",
+      "de": "Betreuer & Professor"
+    },
+    "position": {
+      "en": "Professor at Fırat University, Faculty of Technology, Software Engineering.",
+      "tr": "Fırat Üniversitesi Teknoloji Fakültesi Yazılım Mühendisliği Profesörü.",
+      "de": "Professor für Softwaretechnik an der Fakultät für Technologie der Fırat-Universität."
+    }
+  },
+  {
+    "name": "Özal YILDIRIM",
+    "email": "ozalyildirim@firat.edu.tr",
+    "image": "./images/ozalhoca.jpg",
+    "relationship": {
+      "en": "Associate Professor",
+      "tr": "Doçent",
+      "de": "Außerordentlicher Professor"
+    },
+    "position": {
+      "en": "Associate Professor at Fırat University, Faculty of Technology, Software Engineering.",
+      "tr": "Fırat Üniversitesi Teknoloji Fakültesi Yazılım Mühendisliği Doçenti.",
+      "de": "Außerordentlicher Professor für Softwaretechnik an der Fakultät für Technologie der Fırat-Universität."
+    }
+  },
+  {
+    "name": "Saadin OYUCU",
+    "email": "saadinoyucu@gmail.com",
+    "image": "./images/saadinhoca.jpg",
+    "relationship": {
+      "en": "Advisor",
+      "tr": "Danışman",
+      "de": "Berater"
+    },
+    "position": {
+      "en": "Associate Professor and Head of Department at Adıyaman University, Computer Engineering. General Manager of Deep Zeka.",
+      "tr": "Adıyaman Üniversitesi Bilgisayar Mühendisliği Bölüm Başkanı ve Doçenti. Deep Zeka Genel Müdürü.",
+      "de": "Außerordentlicher Professor und Institutsleiter für Informatik an der Adıyaman-Universität. Geschäftsführer von Deep Zeka."
+    }
+  },
+  {
+    "name": "M.Levent ERÇELİK",
+    "email": "levent.ercelik@telcorex.com",
+    "image": "./images/leventercelik.jpg",
+    "relationship": {
+      "en": "Co-Founder",
+      "tr": "Kurucu Ortak",
+      "de": "Mitgründer"
+    },
+    "position": {
+      "en": "Co-Founder at IQCELL Technology A.Ş. and at Telcorex Communication Technologies.",
+      "tr": "IQCELL Teknoloji A.Ş. ve Telcorex İletişim Teknolojileri Kurucu Ortağı.",
+      "de": "Mitgründer von IQCELL Technology A.Ş. und Telcorex Communication Technologies."
+    }
+  },
+  {
+    "name": "İ.Gökhan USLU",
+    "email": "gokhan.uslu@telcorex.com",
+    "image": "./images/gokhanuslu.jpg",
+    "relationship": {
+      "en": "Co-Founder",
+      "tr": "Kurucu Ortak",
+      "de": "Mitgründer"
+    },
+    "position": {
+      "en": "Co-Founder and Senior Software Engineer at Telcorex Communication Technologies.",
+      "tr": "Telcorex İletişim Teknolojileri Kurucu Ortağı ve Kıdemli Yazılım Mühendisi.",
+      "de": "Mitgründer und Senior Software Engineer bei Telcorex Communication Technologies."
+    }
+  },
+  {
+    "name": "Taner KESER",
+    "email": "taner.keser@iqcell.com.tr",
+    "image": "./images/tanerkeser.jpg",
+    "relationship": {
+      "en": "Board Member",
+      "tr": "Yönetim Kurulu Üyesi",
+      "de": "Vorstandsmitglied"
+    },
+    "position": {
+      "en": "Board Advisor at Dcat Group and Chairman of the Board at ARGECAT. Board Member at Telcorex and IQCELL.",
+      "tr": "Dcat Group Yönetim Kurulu Danışmanı ve ARGECAT Yönetim Kurulu Başkanı. Telcorex ve IQCELL Yönetim Kurulu Üyesi.",
+      "de": "Vorstandsberater bei Dcat Group und Vorstandsvorsitzender bei ARGECAT. Vorstandsmitglied bei Telcorex und IQCELL."
+    }
+  },
+  {
+    "name": "Kaan ULUDAĞ",
+    "email": "kaanuludag@umuttelekom.com.tr",
+    "image": "./images/kaanuludag.jpg",
+    "relationship": {
+      "en": "Chairman of the Board",
+      "tr": "Yönetim Kurulu Başkanı",
+      "de": "Vorstandsvorsitzender"
+    },
+    "position": {
+      "en": "Sales and Marketing Manager and Chairman of the Board at Umut Telekom.",
+      "tr": "Umut Telekom Satış ve Pazarlama Müdürü ve Yönetim Kurulu Başkanı.",
+      "de": "Vertriebs- und Marketingleiter und Vorstandsvorsitzender bei Umut Telekom."
+    }
+  }
+]
