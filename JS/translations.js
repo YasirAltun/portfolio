@@ -120,7 +120,7 @@ export const translations = {
         "A custom Android firmware build for dedicated hardware, covering source compilation, device adaptation and system-image generation.",
       flowiseTitle: "Self-Hosted WhatsApp AI",
       flowiseDesc:
-        "A self-hosted conversational AI workflow connecting WhatsApp, Flowise and a locally deployed language model through compatible APIs.",
+        "A self-hosted conversational AI workflow that processes WhatsApp messages with a locally deployed language model.",
       yoloTitle: "YOLOv8 Shoebox Detection",
       yoloDesc:
         "A real-time object-detection model trained on a custom captured and annotated dataset for shoebox recognition and localization.",
@@ -265,7 +265,7 @@ export const translations = {
         "Belirli bir donanım için kaynak kod derleme, cihaz uyarlama ve sistem imajı üretimini kapsayan özel Android yazılımı.",
       flowiseTitle: "Kendi Sunucusunda WhatsApp Yapay Zekâsı",
       flowiseDesc:
-        "WhatsApp, Flowise ve yerelde çalışan bir dil modelini uyumlu API'ler üzerinden bağlayan, kendi sunucusunda çalışan konuşma yapay zekâsı akışı.",
+        "WhatsApp mesajlarını yerelde çalışan bir dil modeliyle işleyen, kendi sunucusunda çalışan konuşma yapay zekâsı akışı.",
       yoloTitle: "YOLOv8 Ayakkabı Kutusu Tespiti",
       yoloDesc:
         "Ayakkabı kutularını tanıyıp konumlandırmak için özel olarak çekilmiş ve etiketlenmiş veri kümesiyle eğitilen gerçek zamanlı nesne tespiti modeli.",
@@ -410,7 +410,7 @@ export const translations = {
         "Eine angepasste Android-Firmware für dedizierte Hardware, einschließlich Quellcode-Kompilierung, Geräteanpassung und Erstellung des Systemabbilds.",
       flowiseTitle: "Selbst gehostete WhatsApp-KI",
       flowiseDesc:
-        "Ein selbst gehosteter KI-Dialogablauf, der WhatsApp, Flowise und ein lokal betriebenes Sprachmodell über kompatible APIs verbindet.",
+        "Ein selbst gehosteter KI-Dialogablauf, der WhatsApp-Nachrichten mit einem lokal betriebenen Sprachmodell verarbeitet.",
       yoloTitle: "YOLOv8-Schuhkartonerkennung",
       yoloDesc:
         "Ein Echtzeit-Objekterkennungsmodell, trainiert mit einem eigens aufgenommenen und annotierten Datensatz zur Erkennung und Lokalisierung von Schuhkartons.",
