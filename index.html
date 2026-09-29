@@ -261,7 +261,7 @@
               <li class="timeline__item">
                 <p class="timeline__date">
                   <i class="bx bxs-calendar" aria-hidden="true"></i>
-                  <span data-i18n="about.job1Date">Aug 2025 — Present</span>
+                  <span data-i18n="about.job1Date">Aug 2025 — Sep 2026</span>
                 </p>
                 <h4 data-i18n="about.job1Title">Software Engineer — TelcoreX</h4>
                 <p class="timeline__place" data-i18n="about.job1Place">İstanbul, Türkiye</p>
@@ -516,9 +516,94 @@
           <h2 class="section__title" data-i18n="projects.title">Projects</h2>
         </header>
 
-        <p class="projects__cv-note reveal" data-i18n="projects.cvNote">
-          My project work is shared together with my CV.
-        </p>
+        <div class="project-grid">
+          <article class="card project-card reveal">
+            <h3 class="project-card__title">
+              <a href="https://telcorecord.com" target="_blank" rel="noopener noreferrer">
+                <span data-i18n="projects.telcoTitle">TelcoRecord</span>
+                <i class="bx bx-link-external" aria-hidden="true"></i>
+              </a>
+            </h3>
+            <p data-i18n="projects.telcoDesc">
+              An enterprise product for recording and centrally managing business calls on supported Android devices.
+            </p>
+            <ul class="chip-list chip-list--compact" aria-label="Technologies">
+              <li class="chip">Android</li>
+              <li class="chip">Web</li>
+              <li class="chip">Enterprise software</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <h3 class="project-card__title" data-i18n="projects.emotionTitle">
+              Speech Emotion Recognition
+            </h3>
+            <p data-i18n="projects.emotionDesc">
+              A machine-learning system that estimates emotion in continuous valence, arousal and dominance dimensions from speech characteristics.
+            </p>
+            <ul class="chip-list chip-list--compact" aria-label="Technologies">
+              <li class="chip">Python</li>
+              <li class="chip">Machine Learning</li>
+              <li class="chip">Audio Analysis</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <h3 class="project-card__title" data-i18n="projects.agentTitle">
+              Voice Reservation Agent
+            </h3>
+            <p data-i18n="projects.agentDesc">
+              An end-to-end conversational agent that understands reservation requests, gathers the required details and completes bookings through backend APIs.
+            </p>
+            <ul class="chip-list chip-list--compact" aria-label="Technologies">
+              <li class="chip">STT / TTS</li>
+              <li class="chip">LLM</li>
+              <li class="chip">API Integration</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <h3 class="project-card__title" data-i18n="projects.aospTitle">
+              Custom AOSP ROM
+            </h3>
+            <p data-i18n="projects.aospDesc">
+              A custom Android firmware build for dedicated hardware, covering source compilation, device adaptation and system-image generation.
+            </p>
+            <ul class="chip-list chip-list--compact" aria-label="Technologies">
+              <li class="chip">AOSP</li>
+              <li class="chip">Android</li>
+              <li class="chip">Linux</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <h3 class="project-card__title" data-i18n="projects.flowiseTitle">
+              Self-Hosted WhatsApp AI
+            </h3>
+            <p data-i18n="projects.flowiseDesc">
+              A self-hosted conversational AI workflow connecting WhatsApp, Flowise and a locally deployed language model through compatible APIs.
+            </p>
+            <ul class="chip-list chip-list--compact" aria-label="Technologies">
+              <li class="chip">Flowise</li>
+              <li class="chip">WhatsApp API</li>
+              <li class="chip">Local LLM</li>
+            </ul>
+          </article>
+
+          <article class="card project-card reveal">
+            <h3 class="project-card__title" data-i18n="projects.yoloTitle">
+              YOLOv8 Shoebox Detection
+            </h3>
+            <p data-i18n="projects.yoloDesc">
+              A real-time object-detection model trained on a custom captured and annotated dataset for shoebox recognition and localization.
+            </p>
+            <ul class="chip-list chip-list--compact" aria-label="Technologies">
+              <li class="chip">YOLOv8</li>
+              <li class="chip">Roboflow</li>
+              <li class="chip">Computer Vision</li>
+            </ul>
+          </article>
+        </div>
       </section>
 
       <!-- References -->
