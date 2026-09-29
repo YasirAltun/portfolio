@@ -211,17 +211,6 @@ button {
   color: var(--text-muted);
 }
 
-/* Stands in for the project grid: the work itself is shared with the CV. */
-.projects__cv-note {
-  max-width: 34rem;
-  padding: 1.4rem 1.75rem;
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius);
-  background: var(--accent-soft);
-  color: var(--text);
-  text-shadow: var(--halo);
-}
-
 .eyebrow {
   font-size: 0.8rem;
   font-weight: 600;

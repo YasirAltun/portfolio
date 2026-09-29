@@ -58,7 +58,7 @@ export const translations = {
       experience: "Experience",
       education: "Education",
       certifications: "Certifications",
-      job1Date: "Aug 2025 — Present",
+      job1Date: "Aug 2025 — Sep 2026",
       job1Title: "Software Engineer — TelcoreX",
       job1Place: "İstanbul, Türkiye",
       job1Point1:
@@ -106,7 +106,24 @@ export const translations = {
     },
     projects: {
       title: "Projects",
-      cvNote: "My project work is shared together with my CV.",
+      telcoTitle: "TelcoRecord",
+      telcoDesc:
+        "An enterprise product for recording and centrally managing business calls on supported Android devices.",
+      emotionTitle: "Speech Emotion Recognition",
+      emotionDesc:
+        "A machine-learning system that estimates emotion in continuous valence, arousal and dominance dimensions from speech characteristics.",
+      agentTitle: "Voice Reservation Agent",
+      agentDesc:
+        "An end-to-end conversational agent that understands reservation requests, gathers the required details and completes bookings through backend APIs.",
+      aospTitle: "Custom AOSP ROM",
+      aospDesc:
+        "A custom Android firmware build for dedicated hardware, covering source compilation, device adaptation and system-image generation.",
+      flowiseTitle: "Self-Hosted WhatsApp AI",
+      flowiseDesc:
+        "A self-hosted conversational AI workflow connecting WhatsApp, Flowise and a locally deployed language model through compatible APIs.",
+      yoloTitle: "YOLOv8 Shoebox Detection",
+      yoloDesc:
+        "A real-time object-detection model trained on a custom captured and annotated dataset for shoebox recognition and localization.",
     },
     spotify: {
       idle: "Nothing playing right now",
@@ -186,7 +203,7 @@ export const translations = {
       experience: "Deneyim",
       education: "Eğitim",
       certifications: "Sertifikalar",
-      job1Date: "Ağu 2025 — Halen",
+      job1Date: "Ağu 2025 — Eyl 2026",
       job1Title: "Yazılım Mühendisi — TelcoreX",
       job1Place: "İstanbul, Türkiye",
       job1Point1:
@@ -234,7 +251,24 @@ export const translations = {
     },
     projects: {
       title: "Projeler",
-      cvNote: "Proje çalışmalarım CV'm ile birlikte paylaşılıyor.",
+      telcoTitle: "TelcoRecord",
+      telcoDesc:
+        "Desteklenen Android cihazlardaki kurumsal görüşmelerin kaydedilmesi ve merkezi olarak yönetilmesi için geliştirilmiş bir ürün.",
+      emotionTitle: "Konuşmadan Duygu Tanıma",
+      emotionDesc:
+        "Konuşma özelliklerinden duyguyu sürekli değerlik, uyarılma ve baskınlık boyutlarında tahmin eden bir makine öğrenmesi sistemi.",
+      agentTitle: "Sesli Rezervasyon Asistanı",
+      agentDesc:
+        "Rezervasyon taleplerini anlayan, gerekli bilgileri toplayan ve arka uç API'leri üzerinden rezervasyonu tamamlayan uçtan uca konuşma asistanı.",
+      aospTitle: "Özel AOSP ROM",
+      aospDesc:
+        "Belirli bir donanım için kaynak kod derleme, cihaz uyarlama ve sistem imajı üretimini kapsayan özel Android yazılımı.",
+      flowiseTitle: "Kendi Sunucusunda WhatsApp Yapay Zekâsı",
+      flowiseDesc:
+        "WhatsApp, Flowise ve yerelde çalışan bir dil modelini uyumlu API'ler üzerinden bağlayan, kendi sunucusunda çalışan konuşma yapay zekâsı akışı.",
+      yoloTitle: "YOLOv8 Ayakkabı Kutusu Tespiti",
+      yoloDesc:
+        "Ayakkabı kutularını tanıyıp konumlandırmak için özel olarak çekilmiş ve etiketlenmiş veri kümesiyle eğitilen gerçek zamanlı nesne tespiti modeli.",
     },
     spotify: {
       idle: "Şu an bir şey çalmıyor",
@@ -314,7 +348,7 @@ export const translations = {
       experience: "Berufserfahrung",
       education: "Ausbildung",
       certifications: "Zertifikate",
-      job1Date: "Aug. 2025 — Heute",
+      job1Date: "Aug. 2025 — Sept. 2026",
       job1Title: "Software Engineer — TelcoreX",
       job1Place: "Istanbul, Türkei",
       job1Point1:
@@ -362,7 +396,24 @@ export const translations = {
     },
     projects: {
       title: "Projekte",
-      cvNote: "Meine Projektarbeiten werden zusammen mit meinem Lebenslauf geteilt.",
+      telcoTitle: "TelcoRecord",
+      telcoDesc:
+        "Ein Unternehmensprodukt zur Aufzeichnung und zentralen Verwaltung geschäftlicher Anrufe auf unterstützten Android-Geräten.",
+      emotionTitle: "Emotionserkennung aus Sprache",
+      emotionDesc:
+        "Ein Machine-Learning-System, das Emotionen anhand von Sprachmerkmalen in kontinuierlichen Valenz-, Erregungs- und Dominanzdimensionen schätzt.",
+      agentTitle: "Sprachbasierter Reservierungsassistent",
+      agentDesc:
+        "Ein durchgängiger Dialogassistent, der Reservierungsanfragen versteht, erforderliche Angaben erfasst und Buchungen über Backend-APIs abschließt.",
+      aospTitle: "Individuelles AOSP-ROM",
+      aospDesc:
+        "Eine angepasste Android-Firmware für dedizierte Hardware, einschließlich Quellcode-Kompilierung, Geräteanpassung und Erstellung des Systemabbilds.",
+      flowiseTitle: "Selbst gehostete WhatsApp-KI",
+      flowiseDesc:
+        "Ein selbst gehosteter KI-Dialogablauf, der WhatsApp, Flowise und ein lokal betriebenes Sprachmodell über kompatible APIs verbindet.",
+      yoloTitle: "YOLOv8-Schuhkartonerkennung",
+      yoloDesc:
+        "Ein Echtzeit-Objekterkennungsmodell, trainiert mit einem eigens aufgenommenen und annotierten Datensatz zur Erkennung und Lokalisierung von Schuhkartons.",
     },
     spotify: {
       idle: "Gerade läuft nichts",
