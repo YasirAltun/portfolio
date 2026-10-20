@@ -75,21 +75,6 @@
     }
   },
   {
-    "name": "M.Levent ERÇELİK",
-    "email": "levent.ercelik@telcorex.com",
-    "image": "./images/leventercelik.jpg",
-    "relationship": {
-      "en": "Co-Founder",
-      "tr": "Kurucu Ortak",
-      "de": "Mitgründer"
-    },
-    "position": {
-      "en": "Co-Founder at IQCELL Technology A.Ş. and at Telcorex Communication Technologies.",
-      "tr": "IQCELL Teknoloji A.Ş. ve Telcorex İletişim Teknolojileri Kurucu Ortağı.",
-      "de": "Mitgründer von IQCELL Technology A.Ş. und Telcorex Communication Technologies."
-    }
-  },
-  {
     "name": "İ.Gökhan USLU",
     "email": "gokhan.uslu@telcorex.com",
     "image": "./images/gokhanuslu.jpg",
